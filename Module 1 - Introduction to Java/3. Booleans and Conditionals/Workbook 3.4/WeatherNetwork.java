@@ -8,7 +8,12 @@ public class WeatherNetwork {
 
         String forecast = "";
 
-        //IF - ELSE IF - ELSE STATEMENTS HERE!
+        if (temp <= -1)
+            forecast = "The forecast is FREEZING! Stay home!";
+        else if (temp <= 10)
+            forecast = "The forecast is Chilly. Wear a coat!";
+        else
+            forecast = "t's warm. Go outside!";
         
         
         System.out.println(forecast);
