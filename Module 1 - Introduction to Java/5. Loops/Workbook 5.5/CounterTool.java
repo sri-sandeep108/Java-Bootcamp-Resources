@@ -8,6 +8,16 @@ public class CounterTool {
         System.out.println("Oh, ok...");
 
        // See detailed instructions on Learn the Part.
+       System.out.print("1. Pick a number to count by: ");
+       int a = scan.nextInt();
+       System.out.print("2. Pick a number to start counting from: ");
+       int b = scan.nextInt();
+       System.out.print("3. Pick a number to count to: ");
+       int c = scan.nextInt();
+
+       for (int i = b; i <= c; i += a){
+        System.out.print(i + " ");
+       }
 
         scan.close();
     }
