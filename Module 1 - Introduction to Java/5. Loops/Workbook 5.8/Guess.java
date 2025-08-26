@@ -8,7 +8,14 @@ public class Guess  {
        Scanner scan = new Scanner(System.in);
        
        //See Learn the Part for detailed instructions.
-        
+        int secretNumber = (int) (Math.random() * (5 - 1 + 1 ) + 1);
+        int userInput = scan.nextInt();
+        while (secretNumber != userInput){
+            System.out.print("Guess again: ");
+            userInput = scan.nextInt();
+        }
+        System.out.println("You got it!");
+
         scan.close();
     }
 
