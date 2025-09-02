@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.Period;
+
 public class Contact {
     private String name;
     private String phoneNumber;
@@ -8,7 +11,7 @@ public class Contact {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.birthDate = birthDate;
-        this.age = age;
+        this.age = toAge(birthDate);
     }
 
     public Contact(Contact source) {
@@ -18,6 +21,13 @@ public class Contact {
         this.age = source.age;
     }
 
+    public int toAge(String birthDate) {
+        LocalDate start = LocalDate.parse(birthDate);
+        LocalDate now = LocalDate.now();
+        Period difference = Period.between(start, now);
+        return difference.getYears();
+
+    }
 
     public String getName() {
         return this.name;
@@ -43,7 +53,7 @@ public class Contact {
         this.birthDate = birthDate;
     }
 
-    public int getAge() {
+    private int getAge() {
         return this.age;
     }
 
