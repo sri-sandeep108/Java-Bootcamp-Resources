@@ -1,24 +1,24 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class Store {
 
     private List<Movie> movies;
 
     public Store() {
-        // TODO
+        movies = new ArrayList<>();
     }
 
     public Movie getMovie(int index) {
-        // TODO
-        return null;
+        return new Movie(movies.get(index));
     }
 
     public void setMovie(int index, Movie movie) {
-        // TODO
+        movies.set(index, new Movie(movie));
     }
 
     public void addMovie(Movie movie) {
-        // TODO
+        movies.add(new Movie(movie));
     }
 
     public String toString() {
