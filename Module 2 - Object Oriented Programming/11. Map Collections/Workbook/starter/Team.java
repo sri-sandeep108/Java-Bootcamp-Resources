@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 
 public class Team {
@@ -6,26 +7,24 @@ public class Team {
     private Map<String, String> players;
 
     public Team(String name) {
-        // TODO
+        setName(name);
+        players = new HashMap<>();
     }
-    
+
     public String getName() {
-        // TODO
-        return null;
+        return name;
     }
 
     public void setName(String name) {
-        // TODO
+        this.name = name;
     }
 
     public String getPlayer(String position) {
-        // TODO
-        return null;
+        return players.get(position);
     }
 
     public void setPlayer(String position, String player) {
-        // TODO
-    }    
+        players.put(position, player);
+    }
 
-    
 }
