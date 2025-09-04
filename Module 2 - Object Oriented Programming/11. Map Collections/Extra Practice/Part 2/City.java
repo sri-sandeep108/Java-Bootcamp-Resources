@@ -9,6 +9,12 @@ public class City {
         setPopulation(population);
     }
 
+    public City(City source) {
+        setName(source.getName());
+        setCountry(source.getCountry());
+        setPopulation(source.getPopulation());
+    }
+
     public String getName() {
         return this.name;
     }
